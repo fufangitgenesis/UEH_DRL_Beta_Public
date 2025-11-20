@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UEH Training Point Tracker</title>
+    <!-- We keep Tailwind CDN for simplicity in this setup, though npm install is preferred for prod -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,13 +14,12 @@
         font-family: 'Inter', sans-serif;
         background-color: #f8fafc;
       }
-      /* Hide scrollbar for cleaner UI in sidebars if needed */
       .no-scrollbar::-webkit-scrollbar {
           display: none;
       }
       .no-scrollbar {
-          -ms-overflow-style: none;  /* IE and Edge */
-          scrollbar-width: none;  /* Firefox */
+          -ms-overflow-style: none; 
+          scrollbar-width: none; 
       }
     </style>
   <script type="importmap">
@@ -27,16 +27,20 @@
   "imports": {
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/package/xlsx.mjs",
-    "jspdf": "https://esm.sh/jspdf@2.5.1",
-    "jspdf-autotable": "https://esm.sh/jspdf-autotable@3.8.2"
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "xlsx": "https://aistudiocdn.com/xlsx@^0.18.5",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
+    "jspdf": "https://aistudiocdn.com/jspdf@^3.0.4",
+    "jspdf-autotable": "https://aistudiocdn.com/jspdf-autotable@^5.0.2"
   }
 }
 </script>
 </head>
   <body>
     <div id="root"></div>
+    <!-- Main entry point for Vite build -->
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
